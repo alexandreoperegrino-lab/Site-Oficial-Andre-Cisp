@@ -1,0 +1,6 @@
+{
+  "name": "André Cisp - Landing Page",
+  "description": "Institucional Landing Page for tech courses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
