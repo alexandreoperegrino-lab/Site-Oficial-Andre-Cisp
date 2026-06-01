@@ -5,43 +5,43 @@ const articles = [
   {
     slug: 'como-consertar-celular-que-nao-liga',
     title: 'Como Consertar Celular Que Não Liga: O Guia Definitivo',
-    image: 'https://i.imgur.com/rOLcd2z.jpeg',
+    image: 'https://i.imgur.com/M8K8BUr.jpeg',
     desc: 'O passo a passo para testar baterias, conectores e encontrar falhas elétricas na placa-mãe para realizar consertos lucrativos.'
   },
   {
     slug: 'vale-a-pena-abrir-assistencia-tecnica-de-celular',
     title: 'Análise: Ainda Vale a Pena Abrir Assistência Técnica de Celular?',
-    image: 'https://i.imgur.com/U5ZFIqM.jpeg',
+    image: 'https://i.imgur.com/vAXSWzQ.jpeg',
     desc: 'Análise do mercado de eletrônica. Entenda por que o setor de reparos em smartphones nunca sofre com a crise financeira mundial.'
   },
   {
     slug: 'ferramentas-para-conserto-de-celular',
     title: 'Guia de Ferramentas Profissionais',
-    image: 'https://i.imgur.com/OqERzl8.jpeg',
+    image: 'https://i.imgur.com/WD5c9FQ.jpeg',
     desc: 'Conheça os equipamentos que farão diferença na sua bancada: desde as chaves certas até fontes de bancada e microscópio.'
   },
   {
     slug: 'identificar-curto-placa-mae-notebook',
     title: 'Como Identificar Curto na Placa-Mãe de Notebook',
-    image: 'https://i.imgur.com/zub8wE7.jpeg',
+    image: 'https://i.imgur.com/YOmzDsb.jpeg',
     desc: 'Fique íntimo de medições precisas. O jeito infalível da injeção de tensão com a fonte assimétrica e análise térmica para resolver.'
   },
   {
     slug: 'solda-bga-o-que-e-e-como-fazer',
     title: 'Solda BGA (Reballing): O Que É e Como Fazer?',
-    image: 'https://i.imgur.com/vSOrJ2J.jpeg',
+    image: 'https://i.imgur.com/g4k1QT6.jpeg',
     desc: 'Entenda de uma vez a técnica de Reflow e Reballing. A base de calor para garantir soldas esféricas em altas resoluções microeletrônicas.'
   },
   {
     slug: 'defeito-conector-de-carga-celular-resolvido',
     title: 'Resolvendo o Defeito no Conector de Carga Definitivamente',
-    image: 'https://i.imgur.com/8nsgt3n.jpeg',
+    image: 'https://i.imgur.com/SyJ4nHJ.jpeg',
     desc: 'Aprenda a analisar oscilações por USB tester e se certifique da substituição ideal ou do reparo pontual de trilhas.'
   },
   {
     slug: 'como-trocar-tela-quebrada-celular',
     title: 'Troca de Tela: Faça Como as Autorizadas Fazem',
-    image: 'https://i.imgur.com/LOdmxYg.jpeg',
+    image: 'https://i.imgur.com/2BE175f.jpeg',
     desc: 'Evite rasgar flatcables e saiba operar as separadoras térmicas para um acabamento liso e original de loja sem danos colaterais.'
   },
   {
@@ -53,7 +53,7 @@ const articles = [
   {
     slug: 'multimetro-digital-como-usar-na-eletronica',
     title: 'A Ferramenta Básica de Tudo: Medição Com Multímetro Digital',
-    image: 'https://i.imgur.com/CtVO54f.jpeg',
+    image: 'https://i.imgur.com/MpK5Hiy.jpeg',
     desc: 'Saiba interpretar falhas medindo condutividades puras, aferindo resistência em paralelo usando escala de diodos com apitos vitais.'
   },
   {
@@ -65,25 +65,25 @@ const articles = [
   {
     slug: 'como-lucrar-consertando-celulares-e-iphones',
     title: 'Como Lucrar Consertando Smartphones e iPhones em Sua Casa',
-    image: 'https://i.imgur.com/EPPA50X.jpeg',
+    image: 'https://i.imgur.com/8bCqfUe.jpeg',
     desc: 'Guia de como começar a faturar alto no conforto de sua casa com reparos essenciais nas linhas Android e Apple.'
   },
   {
     slug: 'lucro-rapido-com-eletronica-geral',
     title: 'Estratégias de Lucro Rápido com Eletrônica Geral',
-    image: 'https://i.imgur.com/N0RjlUt.jpeg',
+    image: 'https://i.imgur.com/XvBNuw4.jpeg',
     desc: 'Amplie muito sua renda aprendendo o essencial da eletrônica que salva televisores, monitores e eletroeletrônicos condenados.'
   },
   {
     slug: 'lucro-reparo-placas-mae-notebooks',
     title: 'Placas-Mãe de Notebooks: Um Oceano Azul de Oportunidades',
-    image: 'https://i.imgur.com/h1A1PM4.jpeg',
+    image: 'https://i.imgur.com/a1bn9lm.jpeg',
     desc: 'Esqueça a formatação básica. Aprenda os curtos mortais nas placas e tenha faturamentos Premium com seus serviços.'
   },
   {
     slug: 'lucrando-com-solda-bga-e-microeletronica',
     title: 'Solda BGA e Microeletrônica: O Segredo das Altas Margens',
-    image: 'https://i.imgur.com/Rq97Jwj.jpeg',
+    image: 'https://i.imgur.com/1mU4jNc.jpeg',
     desc: 'Porque ser parceiro do aquecimento em soldas para chipsets gráficos pode explodir seu faturamento num nível absurdo.'
   },
   {

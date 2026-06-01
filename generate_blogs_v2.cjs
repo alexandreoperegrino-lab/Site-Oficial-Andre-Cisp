@@ -5,7 +5,7 @@ const articles = [
   {
     slug: 'como-consertar-celular-que-nao-liga',
     title: 'Como Consertar Celular Que Não Liga: O Guia Definitivo e Completo',
-    image: 'https://i.imgur.com/rOLcd2z.jpeg',
+    image: 'https://i.imgur.com/M8K8BUr.jpeg',
     keywords: 'conserto de celular, smartphone não liga, placa morta, manutenção de celulares, curso de manutenção, defeito celular',
     content: `
       <h2>Introdução ao Desafio de "Aparelho Morto"</h2>
@@ -41,7 +41,7 @@ const articles = [
   {
     slug: 'vale-a-pena-abrir-assistencia-tecnica-de-celular',
     title: 'Análise Completa: Ainda Vale a Pena Abrir Uma Assistência Técnica de Celular?',
-    image: 'https://i.imgur.com/U5ZFIqM.jpeg',
+    image: 'https://i.imgur.com/vAXSWzQ.jpeg',
     keywords: 'assistência técnica de celular, como montar assistência de celular, empreender loja manutenção, reparar celular da lucro, como começar assistência',
     content: `
       <h2>O Cenário Tecnológico Mundial e a Assistência Técnica</h2>
@@ -61,7 +61,7 @@ const articles = [
   {
     slug: 'ferramentas-para-conserto-de-celular',
     title: 'Guia de Ferramentas Essenciais e Profissionais para Assistência de Celular',
-    image: 'https://i.imgur.com/OqERzl8.jpeg',
+    image: 'https://i.imgur.com/WD5c9FQ.jpeg',
     keywords: 'ferramentas assistência técnica de celular, ferramentas de manutenção, maquinario para bancada, estação solda, reparo notebook',
     content: `
       <h2>Ferramentas de Base Mecânica para um Estúdio Organizado</h2>

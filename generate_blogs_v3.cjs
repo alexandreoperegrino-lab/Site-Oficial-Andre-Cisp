@@ -5,7 +5,7 @@ const articles = [
   {
     slug: 'como-consertar-celular-que-nao-liga',
     title: 'Como Consertar Celular Que Não Liga: O Guia Definitivo',
-    image: 'https://i.imgur.com/rOLcd2z.jpeg',
+    image: 'https://i.imgur.com/M8K8BUr.jpeg',
     keywords: 'conserto de celular, smartphone não liga, placa morta',
     content: `
       <h2>Introdução ao Desafio de Aparelho Morto</h2>
@@ -21,7 +21,7 @@ const articles = [
   {
     slug: 'vale-a-pena-abrir-assistencia-tecnica-de-celular',
     title: 'Análise: Ainda Vale a Pena Abrir Assistência Técnica de Celular?',
-    image: 'https://i.imgur.com/U5ZFIqM.jpeg',
+    image: 'https://i.imgur.com/vAXSWzQ.jpeg',
     keywords: 'assistência de celular, montar loja, lucro celular',
     content: `
       <h2>O Cenário Tecnológico Mundial</h2>
@@ -37,7 +37,7 @@ const articles = [
   {
     slug: 'ferramentas-para-conserto-de-celular',
     title: 'Guia de Ferramentas Profissionais',
-    image: 'https://i.imgur.com/OqERzl8.jpeg',
+    image: 'https://i.imgur.com/WD5c9FQ.jpeg',
     keywords: 'ferramentas assistência, equipamentos conserto',
     content: `
       <h2>As Bases Mecânicas do Laboratório</h2>
@@ -51,7 +51,7 @@ const articles = [
   {
     slug: 'identificar-curto-placa-mae-notebook',
     title: 'Como Identificar Curto na Placa-Mãe de Notebook',
-    image: 'https://i.imgur.com/zub8wE7.jpeg',
+    image: 'https://i.imgur.com/YOmzDsb.jpeg',
     keywords: 'conserto de notebook, curto placa mãe',
     content: `
       <h2>O Medo de Reparo em Notebooks</h2>
@@ -65,7 +65,7 @@ const articles = [
   {
     slug: 'solda-bga-o-que-e-e-como-fazer',
     title: 'Solda BGA (Reballing): O Que É e Como Fazer?',
-    image: 'https://i.imgur.com/vSOrJ2J.jpeg',
+    image: 'https://i.imgur.com/g4k1QT6.jpeg',
     keywords: 'solda bga, reballing placa, reflow',
     content: `
       <h2>O Padrão BGA de Microprocessadores</h2>
@@ -79,7 +79,7 @@ const articles = [
   {
     slug: 'defeito-conector-de-carga-celular-resolvido',
     title: 'Resolvendo o Defeito no Conector de Carga Definitivamente',
-    image: 'https://i.imgur.com/8nsgt3n.jpeg',
+    image: 'https://i.imgur.com/SyJ4nHJ.jpeg',
     keywords: 'defeito conector de carga, celular não carrega',
     content: `
       <h2>A Porta USB Type-C ou Micro Submetida a Altas Lutas diárias</h2>
@@ -91,7 +91,7 @@ const articles = [
   {
     slug: 'como-trocar-tela-quebrada-celular',
     title: 'Troca de Tela: Faça Como as Autorizadas Fazem',
-    image: 'https://i.imgur.com/LOdmxYg.jpeg',
+    image: 'https://i.imgur.com/2BE175f.jpeg',
     keywords: 'troca de tela do celular, vidro quebrado smartphone',
     content: `
       <h2>Não Fique com Prejuízos Bobos</h2>
@@ -115,7 +115,7 @@ const articles = [
   {
     slug: 'multimetro-digital-como-usar-na-eletronica',
     title: 'A Ferramenta Básica de Tudo: Medição Com Multímetro Digital',
-    image: 'https://i.imgur.com/CtVO54f.jpeg',
+    image: 'https://i.imgur.com/MpK5Hiy.jpeg',
     keywords: 'multímetro celular, conserto placa mãe notebook multimetro',
     content: `
       <h2>Você Precisa Abrir A Visão Escura do Elétron</h2>

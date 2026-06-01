@@ -5,7 +5,7 @@ const articles = [
   {
     slug: "como-lucrar-consertando-celulares-e-iphones",
     title: "Como Lucrar Consertando Smartphones e iPhones em Sua Casa",
-    image: 'https://i.imgur.com/EPPA50X.jpeg',
+    image: 'https://i.imgur.com/8bCqfUe.jpeg',
     keywords:
       "lucrar com conserto de celular, conserto de iphone, assistência técnica em casa",
     content: `
@@ -33,7 +33,7 @@ const articles = [
   {
     slug: "lucro-rapido-com-eletronica-geral",
     title: "Estratégias de Lucro Rápido com Eletrônica Geral",
-    image: 'https://i.imgur.com/N0RjlUt.jpeg',
+    image: 'https://i.imgur.com/XvBNuw4.jpeg',
     keywords:
       "eletrônica geral, ganhar dinheiro com consertos, reparar eletroeletrônicos",
     content: `
@@ -60,7 +60,7 @@ const articles = [
   {
     slug: "lucro-reparo-placas-mae-notebooks",
     title: "Placas-Mãe de Notebooks: Um Oceano Azul de Oportunidades",
-    image: 'https://i.imgur.com/h1A1PM4.jpeg',
+    image: 'https://i.imgur.com/a1bn9lm.jpeg',
     keywords:
       "conserto de placa mãe notebook, placas mãe pc, manutenção em computadores",
     content: `
@@ -84,7 +84,7 @@ const articles = [
   {
     slug: "lucrando-com-solda-bga-e-microeletronica",
     title: "Solda BGA e Microeletrônica: O Segredo das Altas Margens",
-    image: 'https://i.imgur.com/Rq97Jwj.jpeg',
+    image: 'https://i.imgur.com/1mU4jNc.jpeg',
     keywords:
       "solda bga, reballing chips, reflow de qualidade, microeletrônica",
     content: `
