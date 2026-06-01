@@ -5,7 +5,7 @@ const articles = [
   {
     slug: 'como-consertar-celular-que-nao-liga',
     title: 'Como Consertar Celular Que Não Liga: O Guia Definitivo',
-    image: 'https://i.imgur.com/M8K8BUr.jpeg',
+    image: 'https://i.imgur.com/BL9T5UN.jpeg',
     keywords: 'conserto de celular, smartphone não liga, placa morta',
     content: `
       <h2>Introdução ao Desafio de Aparelho Morto</h2>
@@ -21,7 +21,7 @@ const articles = [
   {
     slug: 'vale-a-pena-abrir-assistencia-tecnica-de-celular',
     title: 'Análise: Ainda Vale a Pena Abrir Assistência Técnica de Celular?',
-    image: 'https://i.imgur.com/vAXSWzQ.jpeg',
+    image: 'https://i.imgur.com/VxuHS0t.jpeg',
     keywords: 'assistência de celular, montar loja, lucro celular',
     content: `
       <h2>O Cenário Tecnológico Mundial</h2>
@@ -51,7 +51,7 @@ const articles = [
   {
     slug: 'identificar-curto-placa-mae-notebook',
     title: 'Como Identificar Curto na Placa-Mãe de Notebook',
-    image: 'https://i.imgur.com/YOmzDsb.jpeg',
+    image: 'https://i.imgur.com/5yNqJgX.jpeg',
     keywords: 'conserto de notebook, curto placa mãe',
     content: `
       <h2>O Medo de Reparo em Notebooks</h2>
@@ -65,7 +65,7 @@ const articles = [
   {
     slug: 'solda-bga-o-que-e-e-como-fazer',
     title: 'Solda BGA (Reballing): O Que É e Como Fazer?',
-    image: 'https://i.imgur.com/g4k1QT6.jpeg',
+    image: 'https://i.imgur.com/Xx2bNJE.jpeg',
     keywords: 'solda bga, reballing placa, reflow',
     content: `
       <h2>O Padrão BGA de Microprocessadores</h2>
@@ -91,7 +91,7 @@ const articles = [
   {
     slug: 'como-trocar-tela-quebrada-celular',
     title: 'Troca de Tela: Faça Como as Autorizadas Fazem',
-    image: 'https://i.imgur.com/2BE175f.jpeg',
+    image: 'https://i.imgur.com/NL0s1mL.jpeg',
     keywords: 'troca de tela do celular, vidro quebrado smartphone',
     content: `
       <h2>Não Fique com Prejuízos Bobos</h2>
@@ -115,7 +115,7 @@ const articles = [
   {
     slug: 'multimetro-digital-como-usar-na-eletronica',
     title: 'A Ferramenta Básica de Tudo: Medição Com Multímetro Digital',
-    image: 'https://i.imgur.com/MpK5Hiy.jpeg',
+    image: 'https://i.imgur.com/yT2MiWR.jpeg',
     keywords: 'multímetro celular, conserto placa mãe notebook multimetro',
     content: `
       <h2>Você Precisa Abrir A Visão Escura do Elétron</h2>
