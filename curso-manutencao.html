@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Completo Manutenção e Conserto de Celular - André Cisp</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239333ea' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2v20'/%3E%3Cpath d='m17 5-5-3-5 3v14l5 3 5-3z'/%3E%3C/svg%3E">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            login: '#001a33',
+                            DEFAULT: '#003366',
+                            800: '#002244',
+                            900: '#001429',
+                        },
+                        tech: {
+                            purple: '#9333ea',
+                            purpleGlow: '#a855f7',
+                            light: '#e2e8f0',
+                            orange: '#f97316',
+                            orangeGlow: '#fb923c'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #001a33; color: #f8fafc; }
+        .glow-orange {
+            box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+            transition: all 0.3s ease;
+        }
+        .glow-orange:hover {
+            box-shadow: 0 0 35px rgba(249, 115, 22, 0.7);
+            transform: translateY(-4px) scale(1.02);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+        }
+        .card-tech {
+            background: linear-gradient(145deg, #002244 0%, #001a33 100%);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+        .glass-nav {
+            background: rgba(0, 26, 51, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+        }
+        .hero-bg {
+            background: radial-gradient(circle at center, #003366 0%, #001a33 100%);
+            position: relative;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=2000&q=80');
+            opacity: 0.15;
+            background-size: cover;
+            background-position: center;
+            mix-blend-mode: overlay;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-tech-purple selection:text-white">
+
+    <header class="fixed top-0 w-full z-50 glass-nav transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="font-display font-bold text-2xl tracking-tight text-white flex items-center gap-2 group">
+                <img src="/public/logo.svg" alt="logo André Cisp" width="28" height="28" class="group-hover:rotate-12 transition-transform duration-300">
+                André <span class="text-tech-purpleGlow">Cisp</span>
+            </a>
+            <div class="hidden md:flex gap-4">
+                <a href="#modulos" class="text-tech-light hover:text-white transition-colors">O que vou aprender?</a>
+                <a href="#certificados" class="text-tech-light hover:text-white transition-colors">Certificados</a>
+                <a href="#faq" class="text-tech-light hover:text-white transition-colors">FAQ</a>
+            </div>
+            <a href="https://go.hotmart.com/L106074420L?ap=9c19" target="_blank" class="px-6 py-2 bg-tech-orange hover:bg-tech-orangeGlow text-white font-bold rounded-lg transition-colors glow-orange">
+                Comprar Agora
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg pt-36 pb-24 relative overflow-hidden text-center z-10">
+        <div class="absolute -top-32 -right-32 w-96 h-96 bg-tech-purple/30 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-tech-purple/20 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 max-w-5xl">
+            <div class="inline-block px-4 py-2 bg-white/5 border border-white/10 rounded-full text-tech-purpleGlow font-bold text-sm tracking-widest uppercase mb-6 backdrop-blur-sm">
+                Versão 5.0 - Atualizado
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight mb-8 drop-shadow-2xl text-glow">
+                Curso Completo em <br class="hidden md:block"> Manutenção e Conserto de <span class="text-tech-purpleGlow drop-shadow-md">Celulares</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-tech-light/90 mb-6 font-medium max-w-4xl mx-auto leading-relaxed">
+                Android + Iphone + Reparo em Placas + Troca de Vidro Cola UV e OCA + Software.
+                Aprenda Como Abrir uma Assistência Técnica (Nível Básico, Intermediário e Avançado).
+            </p>
+
+            <div class="py-3 px-6 bg-tech-orange/20 border border-tech-orange/50 text-tech-orangeGlow font-bold rounded-xl max-w-xl mx-auto mb-10 text-lg">
+                Compre o curso até o dia 05 de JUNHO de 2026 e ganhe 03 Brindes!
+            </div>
+
+            <div class="aspect-video w-full max-w-4xl mx-auto rounded-2xl overflow-hidden border border-white/10 shadow-2xl mb-12 relative bg-black shadow-[0_0_40px_rgba(168,85,247,0.3)]">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iIcKPgW8EAA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <a href="https://go.hotmart.com/L106074420L?ap=9c19" target="_blank" class="w-full md:w-auto px-12 py-5 bg-tech-orange hover:bg-tech-orangeGlow text-white font-black text-xl rounded-xl transition-all glow-orange relative overflow-hidden flex items-center justify-center gap-3">
+                    GARANTIR MINHA VAGA COM DESCONTO
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority & Proof -->
+    <section class="py-20 bg-[#001429] relative border-t border-b border-tech-purple/20 shadow-[inset_0_4px_20px_rgba(0,0,0,0.5)] z-20">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
+                    Somos o único curso de celular do Brasil com essas premiações
+                </h2>
+                <p class="text-lg text-tech-light/80 max-w-4xl mx-auto leading-relaxed">
+                    No ano de lançamento, 2016, já conquistamos o <span class="text-tech-purpleGlow font-bold">TOP 1 do Hotmart</span> como o curso mais vendido do Brasil. E em 2025, ainda lideramos essa posição. A premiação acima é o sonho de muitos professores e influenciadores! Hoje, temos mais de <strong class="text-white">50 mil alunos matriculados</strong> em nossa plataforma de ensino.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+                <div class="card-tech p-4 rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform duration-300">
+                    <img src="https://i.imgur.com/c6uTlRD.jpeg" alt="Premiação Hotmart 2016 a 2025" class="w-full h-auto rounded-2xl shadow-lg border border-white/5">
+                    <p class="text-center font-medium mt-4 text-tech-light/90 text-sm">TOP 1 do Hotmart - Mais Vendido</p>
+                </div>
+                <div class="card-tech p-4 rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform duration-300">
+                    <img src="https://i.imgur.com/FgfnxPt.jpeg" alt="Mais de 50 mil alunos" class="w-full h-auto rounded-2xl shadow-lg border border-white/5">
+                    <p class="text-center font-medium mt-4 text-tech-light/90 text-sm">Mais de 50.000 alunos confiam</p>
+                </div>
+                <div class="card-tech p-4 rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform duration-300">
+                    <img src="https://i.imgur.com/2a1HLOb.jpeg" alt="Professor Luis Carlos - Isatec" class="w-full h-auto rounded-2xl shadow-lg border border-white/5">
+                    <p class="text-center font-medium mt-4 text-tech-light/90 text-sm">Professor Luis Carlos (Metodologia Isatec)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificados -->
+    <section id="certificados" class="py-20 bg-navy-800">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://i.imgur.com/XUIFnTe.jpeg" alt="Qualificação de Certificados" class="w-full rounded-2xl shadow-2xl border border-tech-purple/20 rotate-1 hover:rotate-0 transition-transform duration-500">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-6">O Único Curso do Brasil com Direito a <span class="text-tech-orangeGlow">4 Certificados</span></h2>
+                    <p class="text-lg text-tech-light/80 mb-6 leading-relaxed">
+                        Ao finalizar o nosso treinamento você receberá o Certificado de Conclusão com CNPJ, reconhecido em todo território Nacional, fundamental para o crescimento da sua assistência técnica, te trazendo autoridade instantânea.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-tech-light font-medium"><svg class="w-6 h-6 text-tech-purpleGlow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Comprova suas habilidades</li>
+                        <li class="flex items-center gap-3 text-tech-light font-medium"><svg class="w-6 h-6 text-tech-purpleGlow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Segurança para seus clientes</li>
+                        <li class="flex items-center gap-3 text-tech-light font-medium"><svg class="w-6 h-6 text-tech-purpleGlow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Válido no Brasil inteiro</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temário (Modulos) -->
+    <section id="modulos" class="py-24 bg-navy-900 border-t border-white/5 relative z-10">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6">O que você vai aprender?</h2>
+                <p class="text-xl text-tech-light/70 max-w-3xl mx-auto">Um cronograma passo a passo detalhado, do zero até as técnicas mais avançadas em eletrônica e reconstrução de placas.</p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Modulo 1 -->
+                <div class="card-tech rounded-2xl p-6 border border-tech-purple/20">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3"><span class="bg-tech-purple text-white px-3 py-1 rounded-lg text-sm">Módulo 1</span> Como Abrir Assistência e Técnicas Iniciais</h3>
+                    <p class="text-tech-light/80 mb-4 font-medium text-sm">Dentro deste Módulo Serão Ministrados: Como Abrir uma Assistência Técnica, Como Abrir Aparelhos Celulares, Técnicas de Micro-Soldagem, OS e Check List Grátis.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm text-tech-light/60">
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>01-Grupo Exclusivo e Informações</li>
+                            <li>02-Certificado e Documentação</li>
+                            <li>03-Apostila do Curso</li>
+                            <li>04-Assistência Técnica de Sucesso</li>
+                            <li>05-Assistência em HomeOffice</li>
+                            <li>06-Como Abrir Assistência do Zero</li>
+                            <li>07-Pintura e Instalações</li>
+                            <li>08-Bancada e Ferramentas</li>
+                            <li>09-Organização de Mercadorias</li>
+                            <li>10-Fornecedores de Eletrônicos</li>
+                            <li>11-Fornecedor de Películas</li>
+                            <li>12-Fornecedor de Capinhas</li>
+                            <li>13-Aplicar Películas</li>
+                            <li>14-Orçamentos e Entrada</li>
+                            <li>15-Segurança e Prejuízos</li>
+                            <li>16-Valor a Cobrar por Serviço</li>
+                            <li>17-Ganhos (Placas e Telas)</li>
+                            <li>18-Defeitos Celulares Antigos/Novos</li>
+                            <li>19-Telas e Suas Tecnologias</li>
+                            <li>20-Como Abrir Qualquer Celular</li>
+                            <li>21-iFixit: Manual de Reparos</li>
+                        </ul>
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>22-Função de Periféricos</li>
+                            <li>23-Componentes Eletrônicos</li>
+                            <li>24-Esquema Elétrico</li>
+                            <li>25-Ferramentas para conserto</li>
+                            <li>26-Calibração de Temperatura</li>
+                            <li>27-Trocar Qualquer Conector de Carga</li>
+                            <li>28-Como Trocar o Microfone</li>
+                            <li>29-Como Trocar Botão</li>
+                            <li>30-Ativação da Bateria</li>
+                            <li>31-Ativar Bateria Sem Ativador</li>
+                            <li>32-Oxidação Nível 1 e 2</li>
+                            <li>33-Ordem de Serviço</li>
+                            <li>34-Consulta IMEI Bloqueio</li>
+                            <li>35-Termo de Limpeza/Desoxidação</li>
+                            <li>36-Compra/Venda Celular Usado</li>
+                            <li>37-Cliente Desonesto</li>
+                            <li>38-Novas compras (Lucro)</li>
+                            <li>39-Faturamento primeiro mês</li>
+                            <li>40-Tabela Preço Mão de Obra</li>
+                            <li>41-Fornecedores de Aparelhos</li>
+                            <li>42-Venda de Aparelhos Realme</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Modulo 2 -->
+                <div class="card-tech rounded-2xl p-6 border border-tech-purple/20">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3"><span class="bg-tech-purple text-white px-3 py-1 rounded-lg text-sm">Módulo 2</span> Curso de Android Iniciante (AndreCisp e Luis)</h3>
+                    <p class="text-tech-light/80 mb-4 font-medium text-sm">Técnicas de Abertura e Troca de Tela: Samsung, Motorola, Xiaomi, LG. E Brinde Lista de Fornecedores.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm text-tech-light/60">
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>01-Introdução Curso Android Nível 1</li>
+                            <li>02-Motorola Touch/Som</li>
+                            <li>03-Remover Tampa Traseira sem Danificar</li>
+                            <li>04-Remover Tela sem Danificar</li>
+                            <li>05-Trocar Tela e Lente Motorola</li>
+                            <li>06-Conserto Linha A Samsung</li>
+                            <li>07-Troca Tela/Tampa Motorola</li>
+                            <li>08-Retirar Frontal Samsung A</li>
+                            <li>09-Trocar Tela/Tampa Motorola (Outros)</li>
+                            <li>10-Redmi Reiniciando/Loop Infinito</li>
+                            <li>11-Resolver Defeito Crônico Redmi 13c</li>
+                            <li>12-Conserto Display LG K</li>
+                        </ul>
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>13-Redmi Looping Infinito</li>
+                            <li>14-Conserto Linha A Não Liga / Sem Sinal</li>
+                            <li>15-Trocar Frontal Samsung J</li>
+                            <li>16-Display Moto G9 Play</li>
+                            <li>17-Tela Xiaomi Redmi</li>
+                            <li>18-Tela Xiaomi Note</li>
+                            <li>19-Tela Samsung Linha S</li>
+                            <li>20-Display Motorola E</li>
+                            <li>21-Tela Com Aro Linha A</li>
+                            <li>22-Tela Moto Power</li>
+                            <li>23-Moto G84 5G Não Liga Analise</li>
+                            <li>24-Fornecedores(Site/Whatsapp)</li>
+                            <li>25-Fim do Nivel 1 Android</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Modulo 3 -->
+                <div class="card-tech rounded-2xl p-6 border border-tech-purple/20">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3"><span class="bg-tech-purple text-white px-3 py-1 rounded-lg text-sm">Módulo 3</span> Eletrônica e Esquemas Aplicados à Placa de Celular</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm text-tech-light/60">
+                         <ul class="space-y-1 list-disc list-inside">
+                            <li>01-As 3 Grandezas elétricas</li>
+                            <li>02-Diferença de Potencial</li>
+                            <li>03-Queda de Tensão</li>
+                            <li>04-Resistores Parte 1</li>
+                            <li>05-Resistores Parte 2</li>
+                            <li>06-Capacitores Parte 1</li>
+                            <li>07-Capacitores Parte 2</li>
+                            <li>08-Indutores Parte 1</li>
+                            <li>09-Indutores Parte 2</li>
+                            <li>10-Analise de Circuito</li>
+                            <li>11-Diodos</li>
+                            <li>12-Circuito Integrado</li>
+                            <li>13-Cristal 19.2 Mhz</li>
+                        </ul>
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>14-Analise Diagrama em Blocos</li>
+                            <li>15-Trouble Shooting</li>
+                            <li>16-Identificar CIs na placa</li>
+                            <li>17-Identificação Pontos (+ e -)</li>
+                            <li>18-Ligar Aparelho Fonte Bancada</li>
+                            <li>19-Como Usar Multímetros</li>
+                            <li>20-Como usar Escala 200m</li>
+                            <li>21-Placa ou Bateria Parte 1</li>
+                            <li>22-Placa ou Bateria Parte 2</li>
+                            <li>23-Teste 5v</li>
+                            <li>24-Simbologia Eletrônica no Esquema</li>
+                            <li>25-Nomenclaturas Esquema Elétrico</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Modulo 4 -->
+                <div class="card-tech rounded-2xl p-6 border border-tech-purple/20">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3"><span class="bg-tech-purple text-white px-3 py-1 rounded-lg text-sm">Módulo 4</span> Android Intermediário (Cícero Cawoby e Luis Isatec)</h3>
+                    <p class="text-tech-light/80 mb-4 font-medium text-sm">Solda Reparo em Flex, Conectores de Carga, Técnica de Jumper e Brinde 14,5 GB de Arquivos.</p>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm text-tech-light/60">
+                         <ul class="space-y-1 list-disc list-inside">
+                            <li>01-Replica x Original</li>
+                            <li>02-Conserto Botão Power</li>
+                            <li>03-Aparelhos que Não Liga</li>
+                            <li>04-Aparelhos que não Carrega</li>
+                            <li>05-Trilha Para Slot do Chip</li>
+                            <li>06-Samsung Não detecta fone</li>
+                            <li>07-Aparelho Looping Infinito</li>
+                            <li>08-Touch esquenta e trava</li>
+                        </ul>
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>09-Adaptando slot de chip</li>
+                            <li>10-Motorola Problema WiFi</li>
+                            <li>11-LG desliga no carregador</li>
+                            <li>12-Slot de Chip Motorola</li>
+                            <li>13-Samsung problema na antena</li>
+                            <li>14-Eletrônica Aplicada a Placa</li>
+                            <li>15-Baixar 14,5 GB Softwares, Manuais, Roms</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Modulo 5 -->
+                <div class="card-tech rounded-2xl p-6 border border-tech-purple/20">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3"><span class="bg-tech-purple text-white px-3 py-1 rounded-lg text-sm">Módulo 5</span> Reparo de Placas Avançado (Isatec)</h3>
+                     <p class="text-tech-light/80 mb-4 font-medium text-sm">Reparo Avançado, Reballing, Identificação de Curto, Reconstrução de Trilhas.</p>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm text-tech-light/60">
+                         <ul class="space-y-1 list-disc list-inside">
+                            <li>01-Ferramentas para Reparo em Placa</li>
+                            <li>02-Tipos de Stencil para Reballing</li>
+                            <li>03-Curto Linha Primária (Câmera Térmica/Breu)</li>
+                            <li>04-Máscara, Lanterna UV e Fio Jumper</li>
+                            <li>05-Como Fazer Reflow</li>
+                            <li>06-Como Fazer Reballing</li>
+                            <li>07-Replace Troca de Componente</li>
+                            <li>08-Samsung A50 Curto Linha Primária</li>
+                            <li>09-Defeito Botão e Conector</li>
+                            <li>10-J7 prime alta temperatura</li>
+                            <li>11-Curto Linha Motorola</li>
+                            <li>12-Sensor Hall Linha J</li>
+                        </ul>
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>13-LG Tela Branca</li>
+                            <li>14-LG Tela Preta</li>
+                            <li>15-Reballing CI WiFi Motorola</li>
+                            <li>16-Moto z mostra carregando + não carrega</li>
+                            <li>17-Samsung Trilha rompida</li>
+                            <li>18-Samsung Não Liga</li>
+                            <li>19-LG Não funciona WIFI/Bluetooth</li>
+                            <li>20-Pontos alternativos conector carga Motorola</li>
+                            <li>21-Pontos alternativos chave power Motorola</li>
+                            <li>22-Recebimento do Certificado</li>
+                            <li>23-Grupo Suporte Android</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Modulo 6 -->
+                <div class="card-tech rounded-2xl p-6 border border-tech-purple/20">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3"><span class="bg-tech-purple text-white px-3 py-1 rounded-lg text-sm">Módulo 6</span> iPhone Nível Básico</h3>
+                     <p class="text-tech-light/80 mb-4 font-medium text-sm">Troca de Telas dos iPhones X ao 15, Troca de Tampa Traseira Vidro.</p>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm text-tech-light/60">
+                         <ul class="space-y-1 list-disc list-inside">
+                            <li>01-Introdução Iphone</li>
+                            <li>02-Desmontar e montar X e XR</li>
+                            <li>03-Desmontar e montar 11 e 12</li>
+                            <li>04-Desmontar e montar 13 e 14</li>
+                            <li>05-Trocar tela X</li>
+                            <li>06-Trocar tela XR</li>
+                            <li>07-Trocar Tela e Câmera 11</li>
+                        </ul>
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>08-Trocar Tela 12</li>
+                            <li>09-Trocar Tela 13</li>
+                            <li>10-Trocar Tela 12 Pro Max Sem Msg</li>
+                            <li>11-Trocar Tela 14 Pro Max</li>
+                            <li>12-Trocar Tampa Vidro Traseira Iphone</li>
+                            <li>13-Restauração/Instalação IOS 15 ProMax</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Modulo 7 -->
+                <div class="card-tech rounded-2xl p-6 border border-tech-purple/20">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3"><span class="bg-tech-purple text-white px-3 py-1 rounded-lg text-sm">Módulo 7</span> iPhone Nível Intermediário (AJCELL)</h3>
+                     <p class="text-tech-light/80 mb-4 font-medium text-sm">Esquemas Elétricos, Software ZXW e PhoneBoard, Análise de Defeitos em CIs e FPC.</p>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm text-tech-light/60">
+                         <ul class="space-y-1 list-disc list-inside">
+                            <li>01-Parceria AJCELL Antônio</li>
+                            <li>02-Backlight Introdução</li>
+                            <li>03-Backlight Diagrama Apple</li>
+                            <li>04-Programa ZXW</li>
+                            <li>05-PhoneBoard</li>
+                            <li>06-Aula Pratica BackLight 1/2</li>
+                            <li>08-Auto Falante, PA Audio, Codec</li>
+                            <li>09-Princípios funcionamento</li>
+                            <li>10-Inicialização (Não Liga) 1/2</li>
+                            <li>12-Medição 4 pontas</li>
+                            <li>13-Sistema de Varredura Apple</li>
+                            <li>14-Teste de CI</li>
+                            <li>15-Detector de Curto</li>
+                        </ul>
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>16-Circuito Carga Iphone 6</li>
+                            <li>17-Radio Frequência</li>
+                            <li>18-Botões do Iphone</li>
+                            <li>19-Motor Vibracall</li>
+                            <li>20-Setor Câmeras</li>
+                            <li>21-CPU, EPROM e SIM CARD</li>
+                            <li>22-Microeletrônica Aplicação Placas</li>
+                            <li>23-Touch Inoperante Solução</li>
+                            <li>24-Não da imagem Analise FPC</li>
+                            <li>25-Reballing Técnica Gravidade</li>
+                            <li>26-iPhone 11 Pro Falha Carga</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Modulo 8 -->
+                <div class="card-tech rounded-2xl p-6 border border-tech-purple/20">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3"><span class="bg-tech-purple text-white px-3 py-1 rounded-lg text-sm">Módulo 8</span> iPhone Nível Avançado</h3>
+                     <p class="text-tech-light/80 mb-4 font-medium text-sm">Remoção de Mensagem, Gravação eeprom, Memória e Face ID.</p>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm text-tech-light/60">
+                         <ul class="space-y-1 list-disc list-inside">
+                            <li>01-Introdução Avançado</li>
+                            <li>02-Ferramentas Navi Plus/JCPro1000s/JCP7</li>
+                            <li>03-Gravador Eeprom Display</li>
+                            <li>04-Criando Comparador Lógico</li>
+                            <li>05-Câmera Iphone 8 Plus</li>
+                            <li>06-Aumento Memória Iphone</li>
+                            <li>07-Jumper e Troca FPC Iphone</li>
+                            <li>08-Analise CI Carga</li>
+                            <li>09-Reparo CI Carga</li>
+                            <li>10-Iphone Não Liga Análise</li>
+                            <li>11-Codec de Audio</li>
+                            <li>12-Botão Touch</li>
+                            <li>13-Plus Linha Primária (Curto)</li>
+                            <li>14-BackLight</li>
+                        </ul>
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>16-Toque Fantasma Plus</li>
+                            <li>17-Erro 9 ou 4013</li>
+                            <li>18-7 Plus Não reconhece Wifi</li>
+                            <li>19-X sem Touch</li>
+                            <li>20-X carrega desligado s/ som</li>
+                            <li>21-Reparo Face id XR</li>
+                            <li>22-Eeprom Tela sem mensagem 11</li>
+                            <li>23-Bateria Iphone 11 Pro s/ msg</li>
+                            <li>24-Câmera Iphone 12 s/ msg</li>
+                            <li>25-13 Pro Max Tela Branca</li>
+                            <li>26-15 ProMax Fuga de Corrente</li>
+                            <li>27-15 ProMax Junção de Placas</li>
+                            <li>28-Grupo de Suporte iPhone</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Modulo 9 -->
+                <div class="card-tech rounded-2xl p-6 border border-tech-purple/20">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3"><span class="bg-tech-purple text-white px-3 py-1 rounded-lg text-sm">Módulo 9</span> Troca de Vidro Cola UV e OCA (Cícero / Isatec)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm text-tech-light/60">
+                         <ul class="space-y-1 list-disc list-inside">
+                            <li>01-Introdução Cola UV</li>
+                            <li>02-Troca Cola UV Prática</li>
+                            <li>03-Vidro Tela LCD (UV)</li>
+                            <li>04-Vidro Tela LED (UV)</li>
+                            <li>05-Separadora LCD</li>
+                            <li>06-Maquina Tira Polarizer</li>
+                            <li>07-Maquina 4x1 (Bolha, Vacuo, Laminadora, Separadora)</li>
+                            <li>08-Laminadora Airbag OM-K6 EDGE</li>
+                            <li>09-Laminadora OCA Manual</li>
+                        </ul>
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>10-Líquidos e Ferramentas</li>
+                            <li>11-Estoque de Vidros</li>
+                            <li>12-Trocar Vidro Linha J</li>
+                            <li>13-Trocar Vidro LG K</li>
+                            <li>14-Trocar Vidro Linha J (Mais)</li>
+                            <li>15-Introdução Cola OCA (Cícero)</li>
+                            <li>16-Máquinas Troca de Vidro</li>
+                            <li>17-Trocar Vidro Motorola</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Checkout -->
+    <section class="py-24 relative overflow-hidden bg-navy-900 border-t border-tech-purple/20 shadow-[0_-10px_30px_rgba(168,85,247,0.1)]">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1627398225058-2e061801c8eb?auto=format&fit=crop&w=2000&q=80')] opacity-5 mix-blend-overlay"></div>
+        <div class="container mx-auto px-6 max-w-4xl relative z-10 text-center">
+            
+            <h2 class="text-4xl md:text-5xl font-display font-black text-white mb-6">Realize sua Matrícula Hoje Mesmo</h2>
+            <p class="text-xl text-tech-light/80 mb-10 max-w-2xl mx-auto">Pague ainda hoje e GANHE um SUPER DESCONTO</p>
+            
+            <div class="card-tech rounded-3xl p-10 md:p-14 border border-tech-purple/40 shadow-2xl relative">
+                <div class="absolute -top-4 -right-4 bg-tech-orange text-white font-bold px-4 py-2 rounded-xl rotate-3 shadow-lg uppercase text-sm tracking-wider">
+                    Oferta Especial
+                </div>
+                
+                <p class="text-tech-light/60 line-through text-2xl mb-2 font-medium">De R$ 497,00</p>
+                
+                <div class="mb-4">
+                    <span class="text-white text-xl">POR APENAS 12x de</span><br>
+                    <span class="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-tech-orangeGlow to-yellow-400 drop-shadow-lg">R$ 30,72</span>
+                </div>
+                
+                <p class="text-tech-light/80 mb-10 font-medium text-lg">parcelamento no cartão de crédito</p>
+
+                <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4 inline-block mb-10">
+                    <p class="text-green-400 font-bold text-lg mb-1">
+                        🚀 Oportunidade Única
+                    </p>
+                    <p class="text-white">
+                        No BOLETO Á VISTA ou PIX por <strong class="text-xl text-green-400">R$ 297,00</strong>
+                    </p>
+                </div>
+                
+                <a href="https://go.hotmart.com/L106074420L?ap=9c19" target="_blank" class="block w-full py-6 bg-tech-orange hover:bg-tech-orangeGlow text-white font-black text-2xl md:text-3xl rounded-2xl transition-all glow-orange relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+                    <span class="relative z-10 flex items-center justify-center gap-3">
+                        COMPRAR AGORA
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </span>
+                </a>
+                
+                <p class="text-tech-light/50 text-sm mt-6 flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg> Compra 100% Segura. Ambiente Criptografado.
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-[#001429] border-t border-tech-purple/10">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-12 text-center text-glow">PERGUNTAS FREQUENTES</h2>
+            
+            <div class="space-y-6">
+                <!-- FAQ Item -->
+                <div class="bg-navy-800 rounded-2xl p-6 border border-tech-purple/20">
+                    <h3 class="text-xl font-bold text-white mb-3 text-tech-orangeGlow">1. Como recebo o curso?</h3>
+                    <p class="text-tech-light/80 leading-relaxed font-medium">Após a confirmação de pagamento os dados de acesso ao curso são enviados diretamente para e-mail do comprador.</p>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="bg-navy-800 rounded-2xl p-6 border border-tech-purple/20">
+                    <h3 class="text-xl font-bold text-white mb-3 text-tech-orangeGlow">2. Como e aonde vou estudar?</h3>
+                    <p class="text-tech-light/80 leading-relaxed font-medium">Nossas aulas ficam gravadas em nossa plataforma de ensino particular onde cada aluno recebe um login e senha de uso pessoal e você pode estudar onde quiser basta ter apenas um computador, notebook, tablet ou celular com acesso a internet.</p>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="bg-navy-800 rounded-2xl p-6 border border-tech-purple/20">
+                    <h3 class="text-xl font-bold text-white mb-3 text-tech-orangeGlow">3. O que vou aprender a consertar neste curso?</h3>
+                    <p class="text-tech-light/80 leading-relaxed font-medium">Este é um curso do básico ao avançado em consertos de celulares de diversas marcas (Android e iPhone) incluindo troca de telas, manutenção de placas, software e muito mais.</p>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="bg-navy-800 rounded-2xl p-6 border border-tech-purple/20">
+                    <h3 class="text-xl font-bold text-white mb-3 text-tech-orangeGlow">4. O Curso tem Certificado?</h3>
+                    <p class="text-tech-light/80 leading-relaxed font-medium">Sim, o nosso curso tem certificado com CNPJ reconhecido em todo território Nacional (são 4 certificados), valido em todo o Brasil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#00040a] pt-12 pb-8 border-t border-tech-purple/20 text-center mt-auto">
+        <div class="container mx-auto px-6">
+            <a href="/" class="font-display font-bold text-2xl tracking-tight text-white flex items-center justify-center gap-2 group mb-6">
+                <img src="/public/logo.svg" alt="logo André Cisp" width="28" height="28" class="group-hover:rotate-12 transition-transform duration-300 filter grayscale">
+                André <span class="text-tech-purpleGlow">Cisp</span>
+            </a>
+            <p class="text-tech-light/60 font-medium">
+                © 2026 André Cisp. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
