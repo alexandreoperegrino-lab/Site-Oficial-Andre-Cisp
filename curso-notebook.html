@@ -79,6 +79,47 @@
             background-position: center;
             mix-blend-mode: overlay;
         }
+    
+        /* Animations Config */
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .btn-shimmer::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(249, 115, 22, 0.4); }
+            50% { box-shadow: 0 0 35px rgba(249, 115, 22, 0.8); }
+        }
+        .animate-pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 100ms; }
+        .reveal-delay-2 { transition-delay: 200ms; }
+        .reveal-delay-3 { transition-delay: 300ms; }
+
     </style>
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-tech-purple selection:text-white flex flex-col min-h-screen">
@@ -94,7 +135,7 @@
                 <a href="#objetivo" class="text-tech-light hover:text-white transition-colors">Objetivo</a>
                 <a href="#faq" class="text-tech-light hover:text-white transition-colors">FAQ</a>
             </div>
-            <a href="https://go.hotmart.com/M106074454Q?ap=ff55" target="_blank" class="px-6 py-2 bg-tech-orange hover:bg-tech-orangeGlow text-white font-bold rounded-lg transition-colors glow-orange">
+            <a href="https://go.hotmart.com/M106074454Q?ap=ff55" target="_blank" class="px-6 py-2 bg-tech-orange hover:bg-tech-orangeGlow text-white font-bold rounded-lg transition-colors glow-orange animate-pulse-glow btn-shimmer">
                 Comprar Agora
             </a>
         </div>
@@ -124,7 +165,7 @@
             </div>
 
             <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-                <a href="https://go.hotmart.com/M106074454Q?ap=ff55" target="_blank" class="w-full md:w-auto px-12 py-5 bg-tech-orange hover:bg-tech-orangeGlow text-white font-black text-xl rounded-xl transition-all glow-orange relative overflow-hidden flex items-center justify-center gap-3">
+                <a href="https://go.hotmart.com/M106074454Q?ap=ff55" target="_blank" class="w-full md:w-auto px-12 py-5 bg-tech-orange hover:bg-tech-orangeGlow text-white font-black text-xl rounded-xl transition-all glow-orange relative overflow-hidden flex items-center justify-center gap-3 animate-pulse-glow btn-shimmer">
                     GARANTIR MINHA VAGA AGORA - 12x R$ 10,03
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </a>
@@ -133,7 +174,7 @@
     </section>
 
     <!-- Conteúdo em Destaque -->
-    <section class="py-24 bg-navy-900 relative z-10 border-t border-tech-purple/20">
+    <section class="reveal py-24 bg-navy-900 relative z-10 border-t border-tech-purple/20">
         <div class="container mx-auto px-6 max-w-6xl">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4 text-glow">
@@ -145,7 +186,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="card-tech p-8 rounded-3xl border border-tech-purple/30 group hover:border-tech-purple/60 transition-colors">
+                <div class="card-tech p-8 rounded-3xl border border-tech-purple/30 group hover:border-tech-purple/60 transition-colors hover:-translate-y-2 hover:shadow-2xl hover:shadow-tech-purple/20 transition-all duration-500">
                     <div class="w-14 h-14 bg-tech-purple/20 rounded-2xl flex items-center justify-center mb-6 text-tech-purpleGlow group-hover:scale-110 transition-transform">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"/><polyline points="14 2 14 8 20 8"/><path d="M2 15h10"/><path d="m9 18 3-3-3-3"/></svg>
                     </div>
@@ -153,7 +194,7 @@
                     <p class="text-tech-light/80 leading-relaxed font-medium text-[15px]">Ensinamos a fazer a leitura e interpretação dos esquemas elétricos, este é um grande diferencial do nosso curso pois sabemos da grande dificuldade que muitos iniciantes tem e até mesmo técnicos mais experientes em consertar uma placa de notebook usando o esquema elétrico para analise do mesmo.</p>
                 </div>
 
-                <div class="card-tech p-8 rounded-3xl border border-tech-purple/30 group hover:border-tech-purple/60 transition-colors">
+                <div class="card-tech p-8 rounded-3xl border border-tech-purple/30 group hover:border-tech-purple/60 transition-colors hover:-translate-y-2 hover:shadow-2xl hover:shadow-tech-purple/20 transition-all duration-500">
                     <div class="w-14 h-14 bg-tech-purple/20 rounded-2xl flex items-center justify-center mb-6 text-tech-purpleGlow group-hover:scale-110 transition-transform">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l3-9 5 18 3-9h5"/></svg>
                     </div>
@@ -161,7 +202,7 @@
                     <p class="text-tech-light/80 leading-relaxed font-medium text-[15px]">Vamos mostrar para você como configurar o seu osciloscópio e como usar o mesmo para fazer analise das formas de onde e frequências da placa de notebook, usamos o osciloscópio quando precisamos fazer uma analise mais avançada.</p>
                 </div>
 
-                <div class="card-tech p-8 rounded-3xl border border-tech-purple/30 group hover:border-tech-purple/60 transition-colors">
+                <div class="card-tech p-8 rounded-3xl border border-tech-purple/30 group hover:border-tech-purple/60 transition-colors hover:-translate-y-2 hover:shadow-2xl hover:shadow-tech-purple/20 transition-all duration-500">
                     <div class="w-14 h-14 bg-tech-purple/20 rounded-2xl flex items-center justify-center mb-6 text-tech-purpleGlow group-hover:scale-110 transition-transform">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v20"/><path d="M12 12L2.5 9.5"/><path d="M12 12l9.5-2.5"/><path d="M12 12L7.5 21.5"/><path d="M12 12l4.5 9.5"/></svg>
                     </div>
@@ -169,7 +210,7 @@
                     <p class="text-tech-light/80 leading-relaxed font-medium text-[15px]">Iniciamos o nosso curso com aulas de eletrônica aplicada e exclusiva aos componentes da placa de notebook, estas aulas vão ser um complemento para a parte de esquemas elétricos e testes práticos dos componentes na placa dos notebooks com defeitos.</p>
                 </div>
 
-                <div class="card-tech p-8 rounded-3xl border border-tech-purple/30 group hover:border-tech-purple/60 transition-colors">
+                <div class="card-tech p-8 rounded-3xl border border-tech-purple/30 group hover:border-tech-purple/60 transition-colors hover:-translate-y-2 hover:shadow-2xl hover:shadow-tech-purple/20 transition-all duration-500">
                     <div class="w-14 h-14 bg-tech-purple/20 rounded-2xl flex items-center justify-center mb-6 text-tech-purpleGlow group-hover:scale-110 transition-transform">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
                     </div>
@@ -181,7 +222,7 @@
     </section>
 
     <!-- Vantagens do Curso -->
-    <section id="vantagens" class="py-24 bg-[#001429] relative z-20">
+    <section id="vantagens" class="reveal py-24 bg-[#001429] relative z-20">
         <div class="container mx-auto px-6 max-w-5xl">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2">
@@ -200,14 +241,14 @@
                     </ul>
                 </div>
                 <div class="lg:w-1/2">
-                    <img src="https://i.imgur.com/wO2N15x.png" alt="Apresentação do Curso" class="w-full rounded-2xl shadow-2xl shadow-tech-purple/20 border border-tech-purple/20">
+                    <img src="https://i.imgur.com/wO2N15x.png" alt="Apresentação do Curso" class="w-full rounded-2xl shadow-2xl shadow-tech-purple/20 border border-tech-purple/20 animate-float">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Objetivo Principal -->
-    <section id="objetivo" class="py-24 bg-navy-800 relative border-t border-b border-tech-purple/20">
+    <section id="objetivo" class="reveal py-24 bg-navy-800 relative border-t border-b border-tech-purple/20">
         <div class="container mx-auto px-6 max-w-5xl text-center">
             <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6">Objetivo principal do curso</h2>
             <p class="text-xl text-tech-orangeGlow font-bold mb-12">Capacitar você a analisar e identificar defeitos em NoteBooks</p>
@@ -228,15 +269,15 @@
     </section>
 
     <!-- Pricing / Checkout -->
-    <section class="py-24 relative overflow-hidden bg-navy-900 border-t border-tech-purple/20 shadow-[0_-10px_30px_rgba(168,85,247,0.1)]">
+    <section class="reveal py-24 relative overflow-hidden bg-navy-900 border-t border-tech-purple/20 shadow-[0_-10px_30px_rgba(168,85,247,0.1)]">
         <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1627398225058-2e061801c8eb?auto=format&fit=crop&w=2000&q=80')] opacity-5 mix-blend-overlay"></div>
         <div class="container mx-auto px-6 max-w-4xl relative z-10 text-center">
             
             <h2 class="text-4xl md:text-5xl font-display font-black text-white mb-6">Realize sua Matrícula Hoje Mesmo</h2>
             <p class="text-xl text-tech-light/80 mb-10 max-w-2xl mx-auto">Pague ainda hoje e GANHE um SUPER DESCONTO</p>
             
-            <div class="card-tech rounded-3xl p-10 md:p-14 border border-tech-purple/40 shadow-2xl relative">
-                <div class="absolute -top-4 -right-4 bg-tech-orange text-white font-bold px-4 py-2 rounded-xl rotate-3 shadow-lg uppercase text-sm tracking-wider">
+            <div class="card-tech rounded-3xl p-10 md:p-14 border border-tech-purple/40 shadow-2xl relative hover:-translate-y-2 hover:shadow-2xl hover:shadow-tech-purple/20 transition-all duration-500">
+                <div class="absolute -top-4 -right-4 bg-tech-orange text-white font-bold px-4 py-2 rounded-xl rotate-3 shadow-lg uppercase text-sm tracking-wider hover:-translate-y-2 hover:shadow-tech-purpleGlow/30 transition-all duration-500">
                     Oferta Especial
                 </div>
                 
@@ -244,7 +285,7 @@
                 
                 <div class="mb-4">
                     <span class="text-white text-xl">POR APENAS 12x de</span><br>
-                    <span class="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-tech-orangeGlow to-yellow-400 drop-shadow-lg">R$ 10,03</span>
+                    <span class="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-tech-orangeGlow to-yellow-400 drop-shadow-lg hover:-translate-y-2 hover:shadow-tech-purpleGlow/30 transition-all duration-500">R$ 10,03</span>
                 </div>
                 
                 <p class="text-tech-light/80 mb-10 font-medium text-lg">parcelamento no cartão de crédito</p>
@@ -258,7 +299,7 @@
                     </p>
                 </div>
                 
-                <a href="https://go.hotmart.com/M106074454Q?ap=ff55" target="_blank" class="block w-full py-6 bg-tech-orange hover:bg-tech-orangeGlow text-white font-black text-2xl md:text-3xl rounded-2xl transition-all glow-orange relative overflow-hidden group">
+                <a href="https://go.hotmart.com/M106074454Q?ap=ff55" target="_blank" class="block w-full py-6 bg-tech-orange hover:bg-tech-orangeGlow text-white font-black text-2xl md:text-3xl rounded-2xl transition-all glow-orange relative overflow-hidden group animate-pulse-glow btn-shimmer">
                     <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
                     <span class="relative z-10 flex items-center justify-center gap-3">
                         COMPRAR AGORA
@@ -275,7 +316,7 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="py-24 bg-[#001429] border-t border-tech-purple/10">
+    <section id="faq" class="reveal py-24 bg-[#001429] border-t border-tech-purple/10">
         <div class="container mx-auto px-6 max-w-4xl">
             <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-12 text-center text-glow">PERGUNTAS FREQUENTES</h2>
             
@@ -320,6 +361,25 @@
             </p>
         </div>
     </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 50;
+                reveals.forEach(reveal => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Initial check
+        });
+    </script>
 
 </body>
 </html>
